@@ -1,0 +1,28 @@
+{
+  "detectives": [
+    {
+      "id": 1,
+      "name": "Justin Case",
+      "img_url": "",
+      "bad_habits": "drinks, smokes, fights"
+    },
+    {
+      "id": 2,
+      "name": "Ineda Clue",
+      "img_url": "",
+      "bad_habits": "throws recycling in the trash can"
+    },
+    {
+      "id": 3,
+      "name": "Gene Yuss",
+      "img_url": "",
+      "bad_habits": "cusses a lot"
+    },
+    {
+      "id": 4,
+      "name": "Casey Closed",
+      "img_url": "",
+      "bad_habits": "wrestles gators on the weekend"
+    }
+  ]
+}
