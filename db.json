@@ -23,6 +23,11 @@
       "name": "Casey Closed",
       "img_url": "",
       "bad_habits": "wrestles gators on the weekend"
+    },
+    {
+      "name": "Inspector Gadget",
+      "bad_habits": "not solving crimes",
+      "id": 5
     }
   ]
 }

@@ -1,6 +1,9 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function NewDetectiveForm() {
+
+  const navigate = useNavigate()
 
   const [name, setName] = useState('')
   const [habits, setHabits] = useState('')
@@ -19,7 +22,9 @@ function NewDetectiveForm() {
 
     fetch('http://localhost:4000/detectives', OPTIONS)
     .then( res => res.json() )
-    .then( newDetective => console.log(newDetective) )
+    .then( () => navigate('/registry') )
+    // the only big difference here is we navigate back to registry
+    // one nice side effect of this is navigate will load with our new detective since it fetches again!
   }
 
   return (

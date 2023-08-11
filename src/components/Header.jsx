@@ -4,6 +4,7 @@ function Header(props) {
   return (
     <header className="main-header">
       <nav>
+        {/* Link is a lot like <a> except it's more react-router specific */}
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/registry">Detective Registry</Link>

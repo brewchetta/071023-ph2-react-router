@@ -1,15 +1,11 @@
 import { useState, useEffect } from 'react'
+import { useLoaderData } from 'react-router-dom'
 import DetectiveListCard from './DetectiveListCard'
 
 function DetectivePage() {
 
-  const [detectiveObj, setDetectiveObj] = useState({})
-
-  useEffect(() => {
-    fetch('http://localhost:4000/detectives/1')
-    .then(res => res.json())
-    .then(detectiveObj => setDetectiveObj(detectiveObj))
-  }, [])
+  // we use the loader data to get the individual detective
+  const { detectiveObj } = useLoaderData()
 
   return (
     <div>

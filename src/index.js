@@ -10,17 +10,21 @@ import About from './components/About';
 import NewDetectiveForm from './components/NewDetectiveForm';
 import DetectiveList from './components/DetectiveList';
 import MainPage from './components/MainPage';
+import DetectivePage from './components/DetectivePage';
+import ErrorPage from './components/ErrorPage'
 
 // LOADERS //
-import { getDetectivesLoader } from './loaders'
+import { getDetectivesLoader, getDetectiveByIdLoader } from './loaders'
 
+// we place all our routes in the array below
 const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
-        children: [
+        errorElement: <ErrorPage />,
+        children: [ // children are sub-routes for our main App
             {
-                index: true,
+                index: true, // this is the default route inside App
                 element: <MainPage />
             },
             {
@@ -34,7 +38,12 @@ const router = createBrowserRouter([
             {
                 path: "registry",
                 element: <DetectiveList />,
-                loader: getDetectivesLoader
+                loader: getDetectivesLoader // before the page loads, we fetch with getDetectiveLoader
+            },
+            {
+                path: "registry/:id", // the :id lets react-router know to accept params (:id will change to a real id)
+                element: <DetectivePage />,
+                loader: getDetectiveByIdLoader
             }
         ]
     },
