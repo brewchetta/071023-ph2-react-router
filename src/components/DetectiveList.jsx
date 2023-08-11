@@ -1,15 +1,9 @@
-import { useState, useEffect } from 'react'
 import DetectiveListCard from "./DetectiveListCard"
+import { useLoaderData } from 'react-router-dom'
 
 function DetectiveList() {
 
-  const [detectives, setDetectives] = useState([])
-
-  useEffect(() => {
-    fetch('http://localhost:4000/detectives')
-    .then( res => res.json() )
-    .then( data => setDetectives(data) )
-  }, [])
+  const { detectives } = useLoaderData()
 
   const mappedCards = detectives.map(detectiveObj => (
     <DetectiveListCard key={detectiveObj.id} detectiveObj={detectiveObj} />

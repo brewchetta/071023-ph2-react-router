@@ -5,8 +5,8 @@
 - Understand what react-router as a package does
 - Create a configurable object
 - Implement routing for a main App page
-- Implement an error page for 404 pages
-- Utilize the Outlet component
+- Implement an error page with useRouteError
+- Utilize the Outlet component to show children in a wrapper
 - Understand the async / await syntax for fetching
 - Utilize the useLoader hook
 - Create pages with params using the useParams hook

@@ -1,9 +1,5 @@
+import { Outlet } from 'react-router-dom'
 import Header from './Header'
-import MainPage from "./MainPage"
-import DetectiveList from './DetectiveList'
-import About from './About'
-import NewDetectiveForm from './NewDetectiveForm'
-import DetectivePage from './DetectivePage'
 
 function App() {
   return (
@@ -11,15 +7,7 @@ function App() {
 
       <Header />
 
-      <MainPage />
-
-      <DetectiveList />
-
-      <About />
-
-      <NewDetectiveForm />
-
-      <DetectivePage />
+      <Outlet />
 
     </div>
   );

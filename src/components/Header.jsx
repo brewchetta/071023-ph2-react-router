@@ -1,11 +1,13 @@
+import { Link } from 'react-router-dom'
+
 function Header(props) {
   return (
     <header className="main-header">
       <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Detective Registry</a>
-        <a href="#">Register Detective</a>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/registry">Detective Registry</Link>
+        <Link to="/form">Register Detective</Link>
       </nav>
 
       <h1>caseBook</h1>
