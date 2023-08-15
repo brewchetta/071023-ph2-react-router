@@ -29,5 +29,27 @@
       "bad_habits": "not solving crimes",
       "id": 5
     }
+  ],
+  "cases": [
+    {
+      "id": 1,
+      "name": "The Bourbon Incident",
+      "clues": "Someone drank up all the bourbon"
+    },
+    {
+      "id": 2,
+      "name": "The Whiskey Incident",
+      "clues": "Someone drank up all the whiskey"
+    },
+    {
+      "id": 3,
+      "name": "The Vodka Incident",
+      "clues": "Someone drank up all the vodka"
+    },
+    {
+      "id": 4,
+      "name": "The Seltzer Incident",
+      "clues": "There is too much seltzer left."
+    }
   ]
 }

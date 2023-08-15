@@ -6,15 +6,14 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 // COMPONENTS //
 import App from './components/App';
-import About from './components/About';
-import NewDetectiveForm from './components/NewDetectiveForm';
-import DetectiveList from './components/DetectiveList';
 import MainPage from './components/MainPage';
-import DetectivePage from './components/DetectivePage';
+import About from './components/About';
+import DetectiveList from './components/DetectiveList';
+import NewDetectiveForm from './components/NewDetectiveForm';
 import ErrorPage from './components/ErrorPage'
 
 // LOADERS //
-import { getDetectivesLoader, getDetectiveByIdLoader } from './loaders'
+// import {  } from './loaders'
 
 // we place all our routes in the array below
 const router = createBrowserRouter([
@@ -37,13 +36,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "registry",
-                element: <DetectiveList />,
-                loader: getDetectivesLoader // before the page loads, we fetch with getDetectiveLoader
-            },
-            {
-                path: "registry/:id", // the :id lets react-router know to accept params (:id will change to a real id)
-                element: <DetectivePage />,
-                loader: getDetectiveByIdLoader
+                element: <DetectiveList />
             }
         ]
     },

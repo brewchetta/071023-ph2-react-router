@@ -1,10 +1,9 @@
 import DetectiveListCard from "./DetectiveListCard"
-import { useLoaderData } from 'react-router-dom'
 
 function DetectiveList() {
 
   // we are able to get our detectives thanks to our loader
-  const { detectives } = useLoaderData()
+  const detectives = []
 
   const mappedCards = detectives.map(detectiveObj => (
     <DetectiveListCard key={detectiveObj.id} detectiveObj={detectiveObj} />
