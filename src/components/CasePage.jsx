@@ -1,7 +1,8 @@
+import { useLoaderData } from 'react-router-dom'
+
 function CasePage() {
 
-  // replace the caseObj with data from the loader //
-  const caseObj = {}
+  const { caseObj } = useLoaderData()
 
   return (
     <div>

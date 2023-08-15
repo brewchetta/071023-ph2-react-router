@@ -1,13 +1,15 @@
+import { Link, useLoaderData } from 'react-router-dom'
+
 function CaseList() {
 
   // replace this with data from the loader //
-  const cases = []
+  const { casesArray } = useLoaderData()
 
-  const mappedCards = cases.map(case => (
-    <div className="detective-card">
-      <h3>{case.name}</h3>
-      <p>{case.clues}</p>
-      <Link to={ `/cases/${case.id}` }>Go To Case</Link>
+  const mappedCards = casesArray.map(caseObj => (
+    <div key={caseObj.id} className="detective-card">
+      <h3>{caseObj.name}</h3>
+      <p>{caseObj.clues}</p>
+      <Link to={ `/cases/${caseObj.id}` }>Go To Case</Link>
     </div>
   ))
 

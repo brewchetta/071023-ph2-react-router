@@ -9,11 +9,14 @@ import App from './components/App';
 import MainPage from './components/MainPage';
 import About from './components/About';
 import DetectiveList from './components/DetectiveList';
+import DetectivePage from './components/DetectivePage';
 import NewDetectiveForm from './components/NewDetectiveForm';
+import CaseList from './components/CaseList';
+import CasePage from './components/CasePage';
 import ErrorPage from './components/ErrorPage'
 
 // LOADERS //
-// import {  } from './loaders'
+import { getDetectivesLoader, getCasesLoader, singleDetectiveLoader, getClues } from './loaders'
 
 // we place all our routes in the array below
 const router = createBrowserRouter([
@@ -36,8 +39,24 @@ const router = createBrowserRouter([
             },
             {
                 path: "registry",
-                element: <DetectiveList />
-            }
+                element: <DetectiveList />,
+                loader: getDetectivesLoader
+            },
+            {
+                path: "registry/:id",
+                element: <DetectivePage />,
+                loader: singleDetectiveLoader
+            },
+            {
+                path: "cases",
+                element: <CaseList />,
+                loader: getCasesLoader
+            },
+            {
+                path: "cases/:id",
+                element: <CasePage />,
+                loader: getClues
+            },
         ]
     },
 ])

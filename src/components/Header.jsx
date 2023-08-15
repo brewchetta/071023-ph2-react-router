@@ -9,6 +9,7 @@ function Header(props) {
         <Link to="/about">About</Link>
         <Link to="/registry">Detective Registry</Link>
         <Link to="/form">Register Detective</Link>
+        <Link to="/cases">Cases</Link>
       </nav>
 
       <h1>caseBook</h1>

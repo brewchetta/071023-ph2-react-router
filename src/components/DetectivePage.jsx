@@ -1,14 +1,14 @@
 import DetectiveListCard from './DetectiveListCard'
+import { useLoaderData } from 'react-router-dom'
 
 function DetectivePage() {
 
   // we use the loader data to get the individual detective
-  const detectiveObj = {}
+  const { detectiveObj } = useLoaderData()
 
   return (
     <div>
       <h2>{detectiveObj.name}</h2>
-      <p>Ideally we'd put more here but for now I'm being lazy and just showing the card</p>
       <DetectiveListCard detectiveObj={detectiveObj} />
     </div>
   )
