@@ -7,6 +7,7 @@ function CaseList() {
     <div className="detective-card">
       <h3>{case.name}</h3>
       <p>{case.clues}</p>
+      <Link to={ `/cases/${case.id}` }>Go To Case</Link>
     </div>
   ))
 

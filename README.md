@@ -26,16 +26,14 @@ Fork and clone the repository. Run `npm install`. We'll need to install the `rea
 
 3. Apply a new loader which fetches data from cases and loads it when routing to `/cases`.
 
-4. Properly receive and map through the loaded data in the `CaseList` component.
-
-4. Create a link for each mapped case that routes them to `/cases/:id` where `:id` gets replaced by the case id (we'll build the actual routes below soon).
+4. Receive and map through the loaded data in the `CaseList` component using the `useLoaderData` hook.
 
 ### CasePage
 
 1. Create a new route for the individual case page. The path ought to be `/cases/:id` and the component should be `CasePage`.
 
-2. Apply a new loader which fetches data for the individual case using params and loads it when routing to `/cases/:id`.
+2. Apply a new loader which fetches data for an individual case using params and loads it when routing to `/cases/:id`.
 
-3. Properly receive and use the loaded data in the CasePage component.
+3. Receive and use the loaded data in the CasePage component.
 
 4. Apply error handling to the loader in case you receive something other than an `ok` response.
